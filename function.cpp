@@ -1,4 +1,6 @@
+#include <cmath>
 #include <iostream>
+#include <string>
 using namespace std;
 
 // void myFunction()
@@ -28,6 +30,16 @@ using namespace std;
 //     }
 // }
 
+// char userOption(){
+//     char option = 'A';
+//     return option;
+// }
+
+// int userOptionIntegerReturn(){
+//     char result = 'B';
+//     return result;
+// }
+
 int main(void)
 {
     // cout<<"Hello World"<<endl;
@@ -43,6 +55,44 @@ int main(void)
     // cout << numOne << numTwo << endl;
     // int userAge[5]={14,25,33,44,51};
     // funcArrayParameter(userAge);
+
+    // char optionSelection = userOption();
+    // cout<<endl<<optionSelection<<endl<<endl;
+
+    // int userSelection = userOptionIntegerReturn();
+    // cout<<endl<<endl<<userSelection<<endl;
+
+    // ======= library function practice =============
+    // ------math function ------
+    // double numOne = 16;
+    // double squareRootNumOne = sqrt(numOne);
+    // cout<<endl<<squareRootNumOne<<endl;
+    // double numTwo = 1080, numThree=20;
+    // double trigonmetryOperation = sin(numTwo);
+    // cout<<endl<<trigonmetryOperation<<endl;
+
+    // ----------string function -------------
+    // string firstName = "Kailash";
+    // string lastName = "Kumar";
+    // cout << firstName << endl
+    //      << lastName << endl;
+    // int strSizeOne = firstName.length();
+    // int strSizeTwo = lastName.length();
+    // cout << endl
+    //      << strSizeOne << endl
+    //      << strSizeTwo << endl;
+    // string userName = "Aryan";
+    // string myName = "Kailash";
+    // char userAccessLetter = userName.at(1);
+    // cout << endl
+    //      << userAccessLetter << endl;
+
+    // string fullName = userName.append(myName);
+    // cout << endl
+    //      << fullName << endl;
+    // string fullNameUsingOperator = userName + myName;
+    // cout << endl
+    //      << fullNameUsingOperator << endl;
 }
 
 // void funcTwo()
