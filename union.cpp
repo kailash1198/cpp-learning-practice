@@ -95,5 +95,22 @@ int main()
     // varOne.infoBank.paisa.money = 12000;
     // cout << varOne.infoBank.paisa.money << endl;
 
+    union shape
+    {
+        union circle
+        {
+            int radious;
+        };
+        union square
+        {
+            int width;
+        };
+        union rectangle
+        {
+            int width;
+            int length;
+        };
+    };
+
     return 0;
 }
