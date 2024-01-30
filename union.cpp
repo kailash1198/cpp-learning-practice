@@ -73,27 +73,27 @@ int main()
     // varOne.numOne = 100;
     // cout<<varOne.numOne<<endl;
 
-    union userData
-    {
-        int userID;
-        int userCode;
-        union bankData
-        {
-            int acNum;
-            int accCode;
-            union moneyDetails
-            {
-                int money;
-                int moneyCode;
-            } paisa;
-        } infoBank;
-    };
-    union userData varOne;
-    varOne.infoBank.accCode = 12345;
+    // union userData
+    // {
+    //     int userID;
+    //     int userCode;
+    //     union bankData
+    //     {
+    //         int acNum;
+    //         int accCode;
+    //         union moneyDetails
+    //         {
+    //             int money;
+    //             int moneyCode;
+    //         } paisa;
+    //     } infoBank;
+    // };
+    // union userData varOne;
+    // varOne.infoBank.accCode = 12345;
 
-    cout << varOne.infoBank.accCode << endl;
-    varOne.infoBank.paisa.money = 12000;
-    cout << varOne.infoBank.paisa.money << endl;
+    // cout << varOne.infoBank.accCode << endl;
+    // varOne.infoBank.paisa.money = 12000;
+    // cout << varOne.infoBank.paisa.money << endl;
 
     return 0;
 }
