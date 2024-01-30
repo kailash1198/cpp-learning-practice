@@ -95,6 +95,8 @@ int main()
     // varOne.infoBank.paisa.money = 12000;
     // cout << varOne.infoBank.paisa.money << endl;
 
+
+// Shape Area Calculation: Design a union to represent different geometric shapes (circle, square, rectangle, etc.) and store their parameters (radius, side length, width, height, etc.). Write functions to calculate the area of each shape.
     union shape
     {
         union circle
