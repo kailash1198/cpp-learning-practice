@@ -1,7 +1,9 @@
+#include <cstring>
 #include <iostream>
 #include <string>
 // #include <string.h>
 using namespace std;
+#define PI 3.14
 
 // union studentData
 // {
@@ -29,6 +31,48 @@ using namespace std;
 //     return c;
 // }
 
+// int areaOfCircle(int r)
+// {
+//     int A = PI * (r * r);
+//     return A;
+// }
+
+// int areaOfSquare(int l)
+// {
+//     int A = l * l;
+//     return A;
+// }
+
+// int areaOfRectangle(int l, int w)
+// {
+//     int A = l * w;
+//     return A;
+// }
+char userName[30];
+union employeeDatabase
+{
+    /* data */
+    int empId;
+    char empName[30];
+    float sallery;
+} data;
+
+void employeeDetailsFunc()
+{
+    cout << "\t\tEmployee Database" << endl
+         << endl;
+    cout << "Please enter Employees ID number : ";
+    cin >> data.empId;
+    cout << "Please enter Employees Name : ";
+    cin >> userName;
+    strncpy(data.empName, userName, 30);
+    cout << "Please enter Employees Sallery : ";
+    cin >> data.sallery;
+
+    cout << "Employee Id : " << data.empId << endl;
+    cout << "Employee Name : " << data.empName << endl;
+    cout << "Employee Sallery : " << data.sallery << endl;
+}
 int main()
 {
 
@@ -95,24 +139,60 @@ int main()
     // varOne.infoBank.paisa.money = 12000;
     // cout << varOne.infoBank.paisa.money << endl;
 
+    // Shape Area Calculation: Design a union to represent different geometric shapes (circle, square, rectangle, etc.) and store their parameters (radius, side length, width, height, etc.). Write functions to calculate the area of each shape.
+    // int option;
+    // union shape
+    // {
+    //     union circle
+    //     {
+    //         int radious;
+    //     } circleVar;
+    //     union square
+    //     {
+    //         int width;
+    //     } squareVar;
+    //     union rectangle
+    //     {
+    //         int length;
+    //         int width;
+    //     } rectanleVar;
+    // } shapeUnionVar;
 
-// Shape Area Calculation: Design a union to represent different geometric shapes (circle, square, rectangle, etc.) and store their parameters (radius, side length, width, height, etc.). Write functions to calculate the area of each shape.
-    union shape
-    {
-        union circle
-        {
-            int radious;
-        };
-        union square
-        {
-            int width;
-        };
-        union rectangle
-        {
-            int width;
-            int length;
-        };
-    };
+    // cout << "What you want square please enter :" << endl
+    //      << "1. Circle\t2. Square \t3. Rectangle" << endl;
+    // cout << "Please enter your option : ";
+    // cin >> option;
+    // if (option == 1)
+    // {
+    //     cout << "Please give me Radious : ";
+    //     cin >> shapeUnionVar.circleVar.radious;
+    //     int circleResult = areaOfCircle(shapeUnionVar.circleVar.radious);
+    //     cout << "Area of Circle = " << circleResult << endl;
+    // }
+    // else if (option == 2)
+    // {
+    //     cout << "Please give me width size of square: ";
+    //     cin >> shapeUnionVar.squareVar.width;
+    //     int squareResult = areaOfSquare(shapeUnionVar.squareVar.width);
+    //     cout << "Area of square = " << squareResult << endl;
+    // }
+    // else if (option == 3)
+    // {
+    //     cout << "Please give length and Width of rectanle";
+    //     cin >> shapeUnionVar.rectanleVar.length;
+    //     cin >> shapeUnionVar.rectanleVar.width;
+    //     int rectangleResult = areaOfRectangle(shapeUnionVar.rectanleVar.length, shapeUnionVar.rectanleVar.width);
+    //     cout << "Area of Rectangle = " << rectangleResult << endl;
+    // }
+    // else
+    // {
+    //     cout << "Please enter correct Number";
+    //     return 1;
+    // }
+
+    // Employee Database: Create a union to store employee information such as ID (integer), name (string), and salary (float). Write functions to input and display employee details.
+
+    employeeDetailsFunc();
 
     return 0;
 }
