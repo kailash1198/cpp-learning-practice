@@ -5,6 +5,43 @@
 using namespace std;
 #define PI 3.14
 
+// union dataStore
+// {
+//     int intVar;
+//     float floatVar;
+// } dataVar;
+
+// int arithmaticOperation(int numOne)
+// {
+//     if (numOne % 1 == 0)
+//     {
+//         dataVar.intVar = numOne;
+//         int sum = numOne + 10;
+//         int subtraction = numOne - 10;
+//         int multiply = numOne * 10;
+//         int divide = numOne / 10;
+
+//         cout << "Sum : " << sum;
+//         cout << "Subtraction : " << subtraction;
+//         cout << "Multiply : " << multiply;
+//         cout << "Divide : " << divide;
+//     }
+//     else
+//     {
+//         dataVar.floatVar = numOne;
+//         float sum = numOne + 10.10;
+//         float subtraction = numOne - 10.10;
+//         float multiply = numOne * 10.10;
+//         float divide = numOne / 10.10;
+
+//         cout << "SUm : " << sum;
+//         cout << "Subtraction : " << subtraction;
+//         cout << "Multiply : " << multiply;
+//         cout << "Divide : " << divide;
+//     }
+//     return 0;
+// }
+
 // union studentData
 // {
 //     /* data */
@@ -48,31 +85,31 @@ using namespace std;
 //     int A = l * w;
 //     return A;
 // }
-char userName[30];
-union employeeDatabase
-{
-    /* data */
-    int empId;
-    char empName[30];
-    float sallery;
-} data;
+// char userName[30];
+// union employeeDatabase
+// {
+//     /* data */
+//     int empId;
+//     char empName[30];
+//     float sallery;
+// } data;
 
-void employeeDetailsFunc()
-{
-    cout << "\t\tEmployee Database" << endl
-         << endl;
-    cout << "Please enter Employees ID number : ";
-    cin >> data.empId;
-    cout << "Please enter Employees Name : ";
-    cin >> userName;
-    strncpy(data.empName, userName, 30);
-    cout << "Please enter Employees Sallery : ";
-    cin >> data.sallery;
+// void employeeDetailsFunc()
+// {
+//     cout << "\t\tEmployee Database" << endl
+//          << endl;
+//     cout << "Please enter Employees ID number : ";
+//     cin >> data.empId;
+//     cout << "Please enter Employees Name : ";
+//     cin >> userName;
+//     strncpy(data.empName, userName, 30);
+//     cout << "Please enter Employees Sallery : ";
+//     cin >> data.sallery;
 
-    cout << "Employee Id : " << data.empId << endl;
-    cout << "Employee Name : " << data.empName << endl;
-    cout << "Employee Sallery : " << data.sallery << endl;
-}
+//     cout << "Employee Id : " << data.empId << endl;
+//     cout << "Employee Name : " << data.empName << endl;
+//     cout << "Employee Sallery : " << data.sallery << endl;
+// }
 int main()
 {
 
@@ -192,7 +229,11 @@ int main()
 
     // Employee Database: Create a union to store employee information such as ID (integer), name (string), and salary (float). Write functions to input and display employee details.
 
-    employeeDetailsFunc();
+    // employeeDetailsFunc();
 
+    // Numeric Operations: Define a union that can hold either an integer or a floating-point number. Write functions to perform basic arithmetic operations (addition, subtraction, multiplication, division) on these numbers.
+    // int integerNum = 100;
+    // float floatingNum = 100.05;
+    // arithmaticOperation(floatingNum);
     return 0;
 }
