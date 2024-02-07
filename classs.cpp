@@ -84,10 +84,86 @@ using namespace std;
 //     }
 // };
 
+// ====== frinds function and classess =============
+// Why Friend function = Friend function access private and protected data from class
+// syntax =
+// class myClass{
+
+// friend void friendFunc(){}; //with friend keywords
+
+// };
+// class distance
+// {
+// private:
+//     int meter;
+//     friend int addFive(distance obj)
+//     {
+//         obj.meter += 5;
+//         return obj.meter;
+//     };
+
+// public:
+//     distance() : meter(0) {}
+// };
+
+// class myClass
+// {
+// private:
+//     int numOne;
+//     int numTwo;
+//     friend int sumNum(myClass obj)
+//     {
+//         return obj.numOne + obj.numTwo;
+//     };
+
+// public:
+//     myClass() : numOne(0){}; //constructor
+// };
+
+// === friend function💕 ====
+// class myClass
+// {
+// private:
+//     int privateData;
+
+// public:
+//     friend void friendFunction(myClass &obj);
+// };
+
+// void friendFunction(myClass &obj)
+// {
+//     obj.privateData  =100;
+// }
+
+// === friend class 💕 (Same concept as friend function)=====
+// class classOne
+// {
+// private:
+//     int numOne;
+
+// public:
+//     friend class friendClass; // declare friend class
+// };
+
+// // definition of friend class
+// class friendClass
+// {
+// public:
+
+//     void accessPrivateData(classOne& obj){
+//         obj.numOne = 10;
+//     }
+// };
 
 
-int main(void)
+main(void)
 {
+
+    // ====== frinds function and classess =============
+    // classOne classOneObj;
+    // friendClass friendObj;
+    // friendObj.accessPrivateData(classOneObj);
+    // cout<<friendObj.accessPrivateData(classOneObj);
 
     // child obj1;
     // obj1.setID(90);
