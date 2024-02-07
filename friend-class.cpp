@@ -17,9 +17,11 @@ public:
 class friendClass
 {
 public:
-    void accessPrivateData(myClass &obj)
+    int accessPrivateData(myClass &obj)
     {
-        cout<<"PrivateData value access "<<obj.privateData<<endl;
+        // cout<<"PrivateData value access "<<obj.privateData<<endl; //this is also correct
+        int newPrivateDataVar = obj.privateData; // store private value in new variables
+        return newPrivateDataVar;
     };
 };
 
@@ -28,5 +30,5 @@ int main(void)
     myClass obj1;
     friendClass friendObj;
 
-    friendObj.accessPrivateData(obj1);
+    cout << friendObj.accessPrivateData(obj1);
 }
