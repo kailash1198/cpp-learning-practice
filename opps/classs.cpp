@@ -155,10 +155,38 @@ using namespace std;
 //     }
 // };
 
+// class myClass
+// {
+// private:
+//     int numOne;
+
+// public:
+//     int numTwo;
+//     class nestedClassOne
+//     {
+//     public:
+//         int nestedDataOne;
+//         int nestedDataTwo;
+//         class nestedClassThree
+//         {
+//         public:
+//             int nestedDataThree;
+//             int nestedDataFour;
+//         };
+//     };
+// };
 
 main(void)
 {
 
+    // myClass obj1;
+    // myClass::nestedClassOne nestedObj;
+    // nestedObj.nestedDataOne = 100;
+    // cout << nestedObj.nestedDataOne << endl;
+
+    // myClass::nestedClassOne::nestedClassThree nestedObjThree;
+    // nestedObjThree.nestedDataFour = 200;
+    // cout << nestedObjThree.nestedDataFour << endl;
     // ====== frinds function and classess =============
     // classOne classOneObj;
     // friendClass friendObj;
