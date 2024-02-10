@@ -46,7 +46,12 @@ private:
     double radius;
 
 public:
-    circle(double r) : radius(r){};
+    // circle(double r) : radius(r){};
+    circle(double r)
+    {
+        radius = r;
+    };
+
     double area() const
     {
         return 3.14 * radius * radius;
@@ -67,13 +72,19 @@ private:
     double height;
 
 public:
-    rectangle(double w, double h) : width(w), height(h){};
-    double area() const
+    // rectangle(double w, double h) : width(w), height(h){};
+    rectangle(double w, double h)
+    {
+        width = w;
+        height = h;
+    };
+
+    double area()
     {
         return width * height;
     };
 
-    double perimeter() const
+    double perimeter()
     {
         return 2 * (width + height);
     };
@@ -82,9 +93,12 @@ public:
 main(void)
 {
     // abstraction class concept and examples(in abstract class we always need atleast 1 virtual function)
-    circle circle(5); //instance of abstract class
-    rectangle rectangle(4, 6); //instance of abstract class
+    // circle circle(5);          // instance of abstract class
+    // rectangle rectangle(4, 6); // instance of abstract class
 
-    cout << "Circle Area: " << circle.area() << ", Perimeter: " << circle.perimeter() << endl;
-    cout << "Rectangle Area: " << rectangle.area() << ", Perimeter: " << rectangle.perimeter() << endl;
+    // cout << "Circle Area: " << circle.area() << ", Perimeter: " << circle.perimeter() << endl;
+    // cout << "Rectangle Area: " << rectangle.area() << ", Perimeter: " << rectangle.perimeter() << endl;
+
+
+    // shape *shapePointer = new rectangle(10);
 }
