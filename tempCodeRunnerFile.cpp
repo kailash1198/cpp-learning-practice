@@ -1,3 +1,2 @@
 
-    }
-    cout << counting(num - 1) << endl;
+    cout << numTwo << endl;
