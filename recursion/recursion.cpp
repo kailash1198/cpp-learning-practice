@@ -38,8 +38,23 @@ using namespace std;
 //     counting(num - 1);
 // }
 
+int sumNum(int n)
+{
+
+    if (n == 0)
+    {
+        return 0;
+    }
+
+    int sum = n + sumNum(n - 1);
+    return sum;
+}
+
 int main(void)
 {
+
+    int total = sumNum(5);
+    cout << "Total is = " << total << endl;
     // int numResult = factorialFunc(4);
     // cout << numResult << endl;
 
