@@ -71,6 +71,19 @@ using namespace std;
 //     cout << "Bike Name : Pulsar" << endl
 //          << "Car Model : 2024" << endl;
 // }
+
+int printNnumber(int n)
+{
+    int targetNum = n;
+    if (n <= 0)
+    {
+        return 0;
+    }
+    
+    cout << n << endl;
+    return printNnumber(n-1);
+}
+
 int main(void)
 {
     // int num = myFunc(50);
@@ -79,4 +92,6 @@ int main(void)
     // func1(10);
 
     // vehicle();
+
+    printNnumber(5);
 }

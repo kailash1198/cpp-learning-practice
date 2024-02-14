@@ -38,23 +38,42 @@ using namespace std;
 //     counting(num - 1);
 // }
 
-int sumNum(int n)
-{
+// int sumNum(int n)
+// {
 
-    if (n == 0)
-    {
-        return 0;
-    }
+//     if (n == 1)
+//     {
+//         return 1;
+//     }
 
-    int sum = n + sumNum(n - 1);
-    return sum;
+//     cout << "Program iterate count" << endl;
+//     int sum = n + sumNum(n - 1);
+//     return sum;
+// }
+
+// int factorialNum(int num)
+// {
+//     if (num == 1)
+//     {
+//         return 1;
+//     }
+
+//     return num * factorialNum(num - 1);
+// }
+
+//recursive function for reverse string
+string reverseString(string str){
+if(str=="\0"){
+    return 0;
 }
+
+};
 
 int main(void)
 {
 
-    int total = sumNum(5);
-    cout << "Total is = " << total << endl;
+    // int total = sumNum(5);
+    // cout << "Total is = " << total << endl;
     // int numResult = factorialFunc(4);
     // cout << numResult << endl;
 
