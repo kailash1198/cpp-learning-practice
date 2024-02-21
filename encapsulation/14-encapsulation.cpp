@@ -1,0 +1,1 @@
+// Design a class called Circle with private member variables for radius and constant PI value. Implement public member functions to set and get the radius, calculate the area, and calculate the circumference of the circle.
