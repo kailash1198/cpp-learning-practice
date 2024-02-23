@@ -14,7 +14,7 @@ public:
         cout << "Func-2 with same type : " << b << endl;
     }
 
-    void func(float c)
+    void func(string c)
     {
         cout << "Func-3 with same type : " << c << endl;
     }
@@ -24,6 +24,6 @@ int main(void)
 {
     baseClass obj;
     obj.func(10);
-    obj.func(20);
-    obj.func(30);
+    obj.func(20.1098);
+    obj.func("kailash");
 }
