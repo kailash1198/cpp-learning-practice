@@ -2,6 +2,20 @@
 using namespace std;
 // Loops flow understanding and practice
 // While Loop
+
+bool isPrime(int num)
+{
+    int i = 2;
+    while (i * i <= num)
+    {
+        if (num % i == 0)
+        {
+            return false;
+        }
+        i++;
+    }
+    return true;
+}
 int main(void)
 {
     // int num = 100;
@@ -42,19 +56,15 @@ int main(void)
 
     // 3. Write a program to check if a given number is prime or not.
     int userNum;
-    cout<<"Enter number for checking : ";
-    cin>>userNum;
-    int i=1;
+    cout << "Enter number for checking : ";
+    cin >> userNum;
 
-   while(i<=userNum){
-    if(i/userNum==0){
-        cout<<"Not prime";
-    }else{
-        cout<<"Prime";
+    if (isPrime(userNum))
+    {
+        cout << "Prime number" << endl;
     }
-    i++;
-   }
-
-
-
+    else
+    {
+        cout << "This is not prime number" << endl;
+    }
 }
