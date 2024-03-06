@@ -1,3 +1,6 @@
 {
-    "cmake.sourceDirectory": "/workspaces/cpp-learning-practice"
+    "cmake.sourceDirectory": "/workspaces/cpp-learning-practice",
+    "files.associations": {
+        "ostream": "cpp"
+    }
 }
