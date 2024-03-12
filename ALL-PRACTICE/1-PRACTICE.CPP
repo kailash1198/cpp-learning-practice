@@ -1,6 +1,8 @@
 #include <fstream>
 #include <iostream>
 using namespace std;
+#include "add-book.hpp"
+#include "remove-book.hpp"
 // PROJECT TITLE = LIBRARY MANAGEMENT SYSTEM
 
 // ▶️      Functionality -
@@ -8,38 +10,6 @@ using namespace std;
 // 2. Managing patrons
 // 3. borrowing and returning book
 // 4. and generating reports.
-
-// CLASS DEFINITION CODE
-class bookDetails
-{
-public:
-    string title;
-    string author;
-    int bookCode;
-};
-// STRUCTURE DEFINITION CODE
-
-// FUNCTION DEFINITION CODE
-// function for adding books in Library
-void addBook()
-{
-    ofstream libraryFile;
-    libraryFile.open("library.txt");
-    bookDetails add;
-    cout << "Book Title : ";
-    cin >> add.title;
-    libraryFile << add.title << endl;
-
-    cout << "Book Author : ";
-    cin >> add.author;
-    libraryFile << add.author << endl;
-
-    cout << "Book Code : ";
-    cin >> add.bookCode;
-    libraryFile << add.bookCode << endl;
-
-    libraryFile.close();
-}
 
 // Main function
 int main(void)
@@ -59,13 +29,12 @@ int main(void)
     cin >> option;
     if (option == 1)
     {
+
         system("cls");
         addBook();
-        
     }
-
-    // else
-    // {
-    //     exit(0);
-    // }
+    else if (option == 2)
+    {
+        removeBook();
+    }
 }
