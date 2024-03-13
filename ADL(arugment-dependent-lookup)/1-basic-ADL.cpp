@@ -20,4 +20,6 @@ int main(void)
 {
     groupOne::baseClass obj;
     obj.funcOne();
+
+    myFunction(obj); // adl come and check function in namespace and out side of namespace in program.
 }
