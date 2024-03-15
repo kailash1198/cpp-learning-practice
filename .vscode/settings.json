@@ -55,6 +55,7 @@
         "xutility": "cpp",
         "vector": "cpp",
         "set": "cpp",
-        "xtree": "cpp"
+        "xtree": "cpp",
+        "unordered_set": "cpp"
     }
 }

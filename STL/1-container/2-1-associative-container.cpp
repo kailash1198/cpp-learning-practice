@@ -57,11 +57,5 @@ int main(void)
     //     cout << mapName["Number-3"] << endl;
     // }
 
-    multimap<int, string> multimapName;
-    multimapName.insert({1, "kailash"});
-    multimapName.insert({2, "Shyam"});
-    multimapName.insert({2, "Aryan"});
-
-    int countRepeat = multimapName.count(2);
-    cout<<countRepeat<<endl;
+    //  `
 }
