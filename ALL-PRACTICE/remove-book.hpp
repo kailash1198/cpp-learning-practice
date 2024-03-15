@@ -11,14 +11,9 @@ void removeBook()
 startAgain:
     int userCode;
     int foundCode;
-    ofstream libraryFile;
-    libraryFile.open("library.csv");
+    ifstream libraryFile("library.csv");
 
     cout << "Book Code : ";
     cin >> userCode;
 
-
-   if(libraryFile.is_open()){
-    
-   }
 }
