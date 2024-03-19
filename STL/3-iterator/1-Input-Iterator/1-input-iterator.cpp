@@ -1,15 +1,27 @@
 #include <iostream>
+#include <iterator>
 #include <vector>
 using namespace std;
-// Input Iterator -
+// Input Iterator - This is only for value reading using * operator with loops
 int main(void)
 {
-    vector<int> dataList;
-    dataList.push_back(10);
-    dataList.push_back(20);
-    dataList.push_back(30);
-    dataList.push_back(40);
-    dataList.push_back(50);
+    vector<int> dataList = {1, 2, 3, 4, 5};
+    vector<int>::iterator i = dataList.begin();
 
-    back_insert_iterator<vector<int>> back_inserter(dataList);
+    while (i != dataList.end())
+    {
+        cout << *i << endl;
+        i++;
+    }
+
+    vector<float> subjectMarks = {10.25, 30.12, 40.34, 50.28};
+    vector<float>::iterator it=subjectMarks.begin();
+
+    while (it!=subjectMarks.end())
+    {
+        cout<<*it<<endl;
+        it++;
+    }
+
+
 }
