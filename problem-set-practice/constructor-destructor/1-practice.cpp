@@ -25,7 +25,7 @@ public:
     // Destructor
     ~shape()
     {
-        length+1;
+       
     }
 };
 
@@ -37,11 +37,5 @@ int main(void)
     recTwo.~shape();
     cout << rectangle.length << endl;
 
-    // cout << sizeof(rectangle) << endl;
-    // rectangle.displayData();
-
-    // rectangle.~shape();
-
-    // cout << sizeof(rectangle) << endl;
-    // cout << "Size rectwo = " << sizeof(recTwo) << endl;
+  
 }
