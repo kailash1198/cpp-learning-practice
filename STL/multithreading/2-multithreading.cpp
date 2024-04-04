@@ -14,7 +14,7 @@ int main()
 {
     int param = 42;
     MyFunctor functor;
-    std::thread thread_obj(functor, param);
-    thread_obj.join();
+    std::thread t1(functor, param);
+    t1.join();
     return 0;
 }
