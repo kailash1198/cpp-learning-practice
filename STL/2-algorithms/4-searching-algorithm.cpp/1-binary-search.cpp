@@ -8,6 +8,6 @@ int main(void)
 {
     vector<int> listOne = {1, 2, 3, 4, 5, 6, 7};
 
-    bool find_num = binary_search(listOne.begin(), listOne.end(), 2);
+    bool find_num = binary_search(listOne.begin(), listOne.end(), 8);
     cout << find_num << endl;
 }
