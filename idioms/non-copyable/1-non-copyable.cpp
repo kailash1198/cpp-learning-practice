@@ -1,4 +1,5 @@
 #include <iostream>
+// non copyable/non moveable idioms
 // non copyable idioms apply on class for prevent copies of object or assigned of object
 
 class nonCopyable
