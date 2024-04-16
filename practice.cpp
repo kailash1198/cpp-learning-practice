@@ -1,39 +1,31 @@
 #include <iostream>
-#include <math.h>
+#include <cmath>
+#include <string>
+
 using namespace std;
 
-class baseClass
-{
-public:
-    baseClass() = default;
-    baseClass(baseClass &obj)
-    {
-        cout << "This is base class copy constructor" << endl;
+int binaryToDecimal(string binary) {
+    int decimal = 0;
+    int power = 0;
+    
+    // Start from the rightmost bit
+    for (int i = binary.length() - 1; i >= 0; --i) {
+        if (binary[i] == '1') {
+            decimal += pow(2, power);
+        }
+        power++;
     }
-};
+    
+    return decimal;
+}
 
-int main()
-{
-    // int num = 16;
-    // int newNum = sqrt(num);
-    // cout<<newNum<<endl;
-
-    // int n = 14;
-    // for (int i = 2; i <= sqrt(n); i++)
-    // {
-    //     if (n % i != 0)
-    //     {
-    //         cout << "Prime" << endl;
-    //     }
-    //     else
-    //     {
-    //         cout << "Not prime" << endl;
-    //     }
-    // }
-
-    baseClass obj1;
-    baseClass obj2;
-
-    // obj1=obj2;
+int main() {
+    string binaryNumber;
+    cout << "Enter a binary number: ";
+    cin >> binaryNumber;
+    
+    int decimalNumber = binaryToDecimal(binaryNumber);
+    cout << "Decimal equivalent: " << decimalNumber << endl;
+    
     return 0;
 }
