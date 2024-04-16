@@ -28,22 +28,15 @@ public:
 int main()
 {
     baseClass *baseObj;
-
+    // ▶️without dynamic cast
+    //  derivedClass derivedObj
+    //  baseObj = &derivedObj;
+    //  baseObj->funcTwo();//error because you cannot access
+    // ▶️if you want access then you need to change base class type to derived class using dynamic cast at run time
     baseObj = new derivedClass();
+    derivedClass *derivedPtr = dynamic_cast<derivedClass*>(baseObj);
 
-    // baseObj->funcTwo(); //this is error because you are not use dynamic cast //You cannot access derived class function using base class pointer // This is the reason we use dynamic cast
-
-    // using dynamic cast base class to derived class for access functionTwo() in derived class
-    derivedClass *derivedObj = dynamic_cast<derivedClass *>(baseObj);
-    if (derivedObj)
-    {
-        derivedObj->funcOne();
-        derivedObj->funcTwo();
-    }
-    else
-    {
-        cout << "Not converted" << endl;
-    }
+    derivedPtr->funcTwo();
 
     return 0;
 }
