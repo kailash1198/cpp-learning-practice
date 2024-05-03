@@ -5,7 +5,8 @@ using namespace std;
 
 void reverseString(char *str)
 {
-    int length = strlen(str);
+    int length = strlen(str)
+    ;
     char *start = str;
     char *end = str + length - 1;
 
