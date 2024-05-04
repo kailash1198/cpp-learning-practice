@@ -7,13 +7,18 @@
 // ▶️  Product class - for product details information saving
 class product
 {
-private:
+protected:
     std::string product_name;
     std::string product_desc;
     int product_code;
     int product_qty;
+    int product_price;
 
 public:
+    product()
+    {
+        product_price = 10;
+    }
     void createProduct()
     {
         std::cout << "Enter product Name : ";
@@ -27,6 +32,12 @@ public:
 
         std::cout << "Qty : ";
         std::cin >> product_qty;
+    }
+
+    std::string prouduct_get()
+    {
+
+        return product_name;
     }
 };
 
@@ -79,8 +90,11 @@ public:
     {
     }
 
-    void calculateCost()
+    int calculateCost(int qty)
     {
+        product productOne;
+        int totalMoney = qty * 10;
+        return totalMoney;
     }
 };
 
@@ -95,22 +109,41 @@ int main()
 
     if (userAnswer == "yes")
     {
-        product productOne;
-        productOne.createProduct();
+        int productQty;
+        std::cout << "Create Product List";
+        std::cout << "How many product do you want to create : ";
+        std::cin >> productQty;
 
-        std::string buyAnswer;
-        std::cout << "Are you want to buy";
-        std::cin >> buyAnswer;
-        if(buyAnswer=="yes"){
-            
-        }else{
-
+        product *productList;
+        for (int i = 0; i < productQty; i++)
+        {
+            productList = new product;
+            productList->createProduct();
         }
-    }
-    else
-    {
-        custumer custumerOne;
-        custumerOne.createAccount();
+
+        system("cls");
+        std::string proud_search_question;
+        std::cout << "Search Proudct for Purchase : ";
+        std::cin >> proud_search_question;
+
+        if (proud_search_question == productList->prouduct_get())
+        {
+            std::string cartQuestion;
+            std::cout << "DO you want to add in cart : ";
+            std::cin >> cartQuestion;
+            if (cartQuestion == "yes")
+            {
+                int qty;
+                std::cout << "Enter qty : ";
+                std::cin >> qty;
+                shoppingCart cart;
+                
+                system("cls");
+                std::cout<<"------------------"<<std::endl;
+                int total = cart.calculateCost(qty);
+                std::cout<<"Total cost = "<<total<<std::endl;
+            }
+        }
     }
 
     //
