@@ -7,7 +7,8 @@ int main(void)
     try
     {
         int numOne = 10;
-        int numTwo = 1;
+        int numTwo = 2;
+        numTwo = 1;
         int res;
         if (numTwo == 1)
         {

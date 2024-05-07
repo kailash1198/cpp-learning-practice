@@ -18,7 +18,7 @@ using namespace std;
 //  3. throw
 // For using this in built exception handing make sure yoi=u include header files  <stdexcept>
 
-int main(void)
+int main()
 {
     int numOne = 100;
     int newNum = numOne / 0;
@@ -26,7 +26,9 @@ int main(void)
 
     // Inbuilt keyword for exception handing
     // 1. try block
-    try
-    {
-    }
+    // try
+    // {
+    // }
+
+    return 0;
 }
