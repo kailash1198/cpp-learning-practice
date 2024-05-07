@@ -19,7 +19,7 @@ public:
         width = b;
     }
 
-    void drawLine()
+    virtual void drawLine()
     {
         std::cout << "Canvas function - draw()" << std::endl;
     };
@@ -32,12 +32,9 @@ private:
     double radious;
 
 public:
-    double drawLine(int a)
+    void drawLine()
     {
         std::cout << "Circle -> Line draw success" << std::endl;
-        std::cout << "Radious = " << a << std::endl;
-
-        return radious;
     }
 };
 
@@ -48,10 +45,9 @@ private:
     int length;
 
 public:
-    void drawLine(int a)
+    void drawLine()
     {
         std::cout << "Square -> Line draw success" << std::endl;
-        std::cout << "Length(Total) = " << a + a + a + a << std::endl;
     }
 };
 
@@ -63,10 +59,9 @@ private:
     int length;
 
 public:
-    void drawLine(int a, int b)
+    void drawLine()
     {
         std::cout << "Triangle -> Line draw success" << std::endl;
-        std::cout << "Base and Length = " << a << " " << b << std::endl;
     }
 };
 
@@ -80,12 +75,12 @@ int main()
     triangle triangle_one;
 
     canvasPtr = &circle_one;
-    canvasPtr->drawLine(20);
+    canvasPtr->drawLine();
 
     canvasPtr = &square_one;
-    canvasPtr->drawLine(20);
+    canvasPtr->drawLine();
 
     canvasPtr = &triangle_one;
-    canvasPtr->drawLine(5, 10);
+    canvasPtr->drawLine();
     return 0;
 }
