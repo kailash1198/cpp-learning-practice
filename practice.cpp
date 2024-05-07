@@ -1,33 +1,39 @@
 #include <iostream>
-#include <string>
-using namespace std;
+// using namespace std;
 
-// A step array is an array of integers where each element has a difference of at most k with its neighbor
-// . Given a key x, we need to find the index value of x if multiple elements exist,
-// and return the first occurrence of the key.
-
-int search(int arr[], int n, int x, int k)
+void reverse_dig(int &a, int &b)
 {
-    // Complete the function
-    int index;
-    for (int i = 0; i < n; i++)
+    // Add your code here.
+    int originalNumber_one = a;
+    int originalNumber_two = b;
+
+    int reminder_one;
+    int reminder_two;
+
+    int reverse_one = 0;
+    int reverse_two = 0;
+
+    while (a != 0)
     {
-        if (arr[i] == x)
-        {
-            index = i;
-        }
+        reminder_one = a % 10;
+        reverse_one = reverse_one * 10 + reminder_one;
+        a /= 10;
     }
 
-    return index;
-}
+    while (b != 0)
+    {
+        reminder_two = b % 10;
+        reverse_two = reverse_two * 10 + reminder_two;
+        b /= 10;
+    }
 
+    std::cout << reverse_one << std::endl;
+    std::cout << reverse_two << std::endl;
+}
 int main()
 {
-    int myArray[5] = {1, 2, 3, 4, 5};
-    int size=5;
-    int searchKey = 2;
-    int indexValue;
-
-    search(myArray, size, searchKey);
+    int a = 123;
+    int b = 456;
+    reverse_dig(a, b);
     return 0;
 }
