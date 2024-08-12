@@ -1,39 +1,27 @@
-#include <iostream>
-// using namespace std;
-
-void reverse_dig(int &a, int &b)
-{
-    // Add your code here.
-    int originalNumber_one = a;
-    int originalNumber_two = b;
-
-    int reminder_one;
-    int reminder_two;
-
-    int reverse_one = 0;
-    int reverse_two = 0;
-
-    while (a != 0)
-    {
-        reminder_one = a % 10;
-        reverse_one = reverse_one * 10 + reminder_one;
-        a /= 10;
+class Solution {
+  public:
+    //Function to check if a number is prime or not.
+    string isPrime(int n) {
+        bool flag = false;
+    
+        //Checking if the number is less than 2, it is not prime.
+        if (n < 2)
+            return "No";
+        else {
+            //Iterating from 2 to square root of n to check if n is divisible by any number.
+            for (int i = 2; i <= sqrt(n); i++) {
+                //If n is divisible by any number, set flag to true and break the loop.
+                if (n % i == 0) {
+                    flag = true;
+                    break;
+                }
+            }
+    
+            //If no number divides n, it is prime.
+            if (flag == false)
+                return "Yes";
+            else
+                return "No";
+        }
     }
-
-    while (b != 0)
-    {
-        reminder_two = b % 10;
-        reverse_two = reverse_two * 10 + reminder_two;
-        b /= 10;
-    }
-
-    std::cout << reverse_one << std::endl;
-    std::cout << reverse_two << std::endl;
-}
-int main()
-{
-    int a = 123;
-    int b = 456;
-    reverse_dig(a, b);
-    return 0;
-}
+};
